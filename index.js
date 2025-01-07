@@ -87,6 +87,32 @@ for( let i = 0 ; i< a.length; i++){
 }
 console.log(largest);
 
+// Use a for loop to count how many numbers in the array [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] are even.
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let count = 0;
+
+for(let i = 0 ;i< arr.length; i++){
+    if(arr[i] %2 ==0){
+        count++;
+    }
+}
+
+console.log(count);
+
+//Use a for loop to reverse the array [1, 2, 3, 4, 5] and print the reversed array
+
+const arr1 = [1, 2, 3, 4, 5]
+const res = []
+
+for(let i = arr1.length-1 ;i >= 0 ; i--){
+
+    res.push(arr1[i]);
+    
+}
+console.log(res)
+
 
 
 
