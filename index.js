@@ -136,7 +136,7 @@ console.log(per['name'])
 
 console.log(per.age);
 
-console.log(per['age']);
+
 
 
 // delete keyword can delete the objects property
