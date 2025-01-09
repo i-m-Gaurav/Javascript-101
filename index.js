@@ -114,6 +114,43 @@ for(let i = arr1.length-1 ;i >= 0 ; i--){
 console.log(res)
 
 
+const main = [1,2,3,4,[4,5,6,6,[3,3,2,2]]];
+
+console.log(main);
+
+
+
+
+
+const per = {
+    name :'gaurav',
+    age : 43
+}
+
+// There are two types of notation for accessing the objects properties.
+// dot notation and bracket notion.
+
+console.log(per.name);
+
+console.log(per['name'])
+
+console.log(per.age);
+
+console.log(per['age']);
+
+
+// delete keyword can delete the objects property
+
+delete per.name;
+
+console.log(per)
+
+
+
+
+
+
+
 
 
 
