@@ -1,0 +1,21 @@
+{
+  "name": "javascript101",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "javascript101": "file:",
+    "puppeteer": "^23.11.1",
+    "youtube-dl-exec": "^3.0.12",
+    "youtube-transcript": "^1.2.1",
+    "youtube-transcript-api": "^1.1.2"
+  }
+}

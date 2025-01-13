@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Transcript Fetcher</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>YouTube Transcript Fetcher</h1>
+  <input type="text" id="videoId" placeholder="Enter YouTube Video ID">
+  <button onclick="fetchTranscript()">Get Transcript</button>
+  <textarea id="transcript" placeholder="Transcript will appear here..." readonly></textarea>
+
+  <script>
+    async function fetchTranscript() {
+      const videoId = document.getElementById('videoId').value;
+      const apiUrl = `http://localhost:3000/transcript?videoId=${videoId}`;
+
+      try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        document.getElementById('transcript').value = data.transcript;
+      } catch (error) {
+        console.error("Error fetching transcript:", error);
+        document.getElementById('transcript').value = "Failed to fetch transcript.";
+      }
+    }
+  </script>
+</body>
+</html>
